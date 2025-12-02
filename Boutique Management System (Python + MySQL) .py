@@ -1,13 +1,11 @@
 # In[1]:
 
-
 import mysql.connector
 mycon = mysql.connector.connect(host='localhost', user='root',password='root',database='sboutique')
 mycur = mycon.cursor()
 
 
 # In[2]:
-
 
 def check():
     qry = 'select cust_id from customer;'
@@ -20,7 +18,6 @@ def check():
 
 
 # In[3]:
-
 
 def cust_ac():
     ask = 'Y'
@@ -49,7 +46,6 @@ def cust_ac():
 
 # In[4]:
 
-
 def get_bkd_pro(cust_id):
     qry = 'select bkd_pro from customer where cust_id=%s;'
     mycur.execute(qry, (cust_id,))
@@ -59,7 +55,6 @@ def get_bkd_pro(cust_id):
 
 
 # In[5]:
-
 
 def sign_in():
     try:
@@ -176,7 +171,6 @@ def sign_in():
 
 # In[6]:
 
-
 def view_pro():
     qry = 'select * from products;'
     mycur.execute(qry)
@@ -195,7 +189,6 @@ def view_pro():
 
 
 # In[7]:
-
 
 def addpro():
     view_pro() 
@@ -216,7 +209,6 @@ def addpro():
 
 # In[8]:
 
-
 def delpro():
     view_pro()
     delt = input("Enter ID of product to be deleted")
@@ -227,7 +219,6 @@ def delpro():
 
 
 # In[9]:
-
 
 def emp_sign_in():
     try:
@@ -278,7 +269,6 @@ def emp_sign_in():
 
 # In[10]:
 
-
 def addemp(): 
     qry = "select * from employee;"
     mycur.execute(qry)
@@ -314,7 +304,6 @@ def addemp():
 
 # In[11]:
 
-
 def employer(): 
     while True:
         print()
@@ -329,7 +318,6 @@ def employer():
 
 
 # In[ ]:
-
 
 print('WELCOME !')
 while True:
@@ -353,6 +341,3 @@ while True:
         print("Thankyou for visiting !")
         break
 space()
-        
-
-
